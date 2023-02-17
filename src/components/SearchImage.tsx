@@ -20,7 +20,7 @@ export const SearchImage: FC<Props> = ({ searchResult, loading, selectImage }) =
           <>
             {searchResult?.length
               ? searchResult.slice(0, 20).map((searchItem) => (
-                  <div role='button' onClick={() => selectImage(searchItem)}>
+                  <div role='button' onClick={() => selectImage(searchItem)} key={searchItem.imageId}>
                     <img src={searchItem.thumbnailUrl} />
                   </div>
                 ))

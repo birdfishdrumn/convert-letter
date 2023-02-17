@@ -72,7 +72,7 @@ const Search = () => {
             <p className='text-lg font-extrabold text-stone-600 mb-3'>Choose Image</p>
             {selectedImage?.length ? (
               selectedImage.map((image) => (
-                <div>
+                <div key={image.imageId}>
                   <img
                     src={image.thumbnailUrl}
                     width={220}
